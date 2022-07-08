@@ -245,7 +245,7 @@ class PeminjamanController extends Controller
 for($i=0; $i< $jml; $i++)
         { $b = Barang::where('id',$barangs_id[$i])->first();
             if($b->jumlah < $jumlah_pinjam[$i]){
-                        return redirect()->back()->with('warning', 'melebihi stok');
+                        return redirect()->back()->with('warning', 'maaf jumlah barang yang anda pinjam melebihi stok');
 
             }else{
             $dtpeminjaman =new DetailPeminjaman();
@@ -273,6 +273,14 @@ for($i=0; $i< $jml; $i++)
                  $peminjaman->save();    
              }
         return redirect('/peminjaman/form')->with('success', 'Data Berhasil Ditambahkan!');
+    }
+
+     public function download(Request $request, $surat_pinjam)
+    {
+        
+return response()->download(public_path('surat/'. $surat_pinjam));
+
+       
     }
 
 

@@ -274,6 +274,7 @@ Route::get('/status_kembali/{kode_peminjaman}', 'App\Http\Controllers\Peminjaman
  
 //RIWAYAT PEMINJAM staff
 Route::get('/peminjaman/pengajuan', [PeminjamanController::class, 'pengajuan']); 
+Route::get('/download/{surat_pinjam}', [PeminjamanController::class, 'download']); 
 Route::get('/detailbarang/{id}', [PeminjamanController::class, 'detail_barang']); 
 
 

@@ -214,10 +214,12 @@
                                                 <option selected>Pilih Nama Barang</option>
 
                                                 @foreach ($inputbarang as $data)
-                                                    <option value="{{ $data->id }}"> {{ $data->kode }} -
-                                                        {{ $data->jenis_barangs->jenis_barang }}
-                                                        {{ $data->spesifikasi }}
-                                                    </option>
+                                                    @if ($data->jumlah > 0)
+                                                        <option value="{{ $data->id }}"> {{ $data->kode }} -
+                                                            {{ $data->jenis_barangs->jenis_barang }}
+                                                            {{ $data->spesifikasi }}
+                                                        </option>
+                                                    @endif
                                                 @endforeach
                                             </select>
                                         </div>

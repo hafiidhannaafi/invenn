@@ -71,6 +71,11 @@
                                                         button type="button" class="btn btn-sm">Detail</a>
                                                 </td>
                                                 <td>
+                                                    <a href="{{ url('/download', $data->surat_pinjam) }}"
+                                                        style=" float :right; background-color:   #012970; color:#FFFFFF"
+                                                        button type="button" class="btn btn-sm">Download</a>
+                                                </td>
+                                                <td>
 
                                                     <!-- Large Modal -->
 
@@ -184,9 +189,9 @@
                                                                                     </div>
                                                                                 </div>
 
-                                                                               
 
-                                                                                
+
+
 
                                                                             </div>
                                                                         </div>
