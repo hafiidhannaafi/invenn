@@ -214,7 +214,7 @@
                                                 <option selected>Pilih Nama Barang</option>
 
                                                 @foreach ($inputbarang as $data)
-                                                    @if ($data->jumlah > 0)
+                                                    @if (($data->jenis_asets_id == 1 || $data->jenis_asets_id == 3 || $data->jenis_asets_id == 4) && $data->jumlah > 0)
                                                         <option value="{{ $data->id }}"> {{ $data->kode }} -
                                                             {{ $data->jenis_barangs->jenis_barang }}
                                                             {{ $data->spesifikasi }}

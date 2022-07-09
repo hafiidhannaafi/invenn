@@ -51,7 +51,7 @@ class PeminjamanController extends Controller
         $jenisbarang = JenisBarang::all();
         $datasatuan = Satuan::all();
         $inputbarang = Barang::all();
-        $peminjaman = Peminjaman::all();
+       $peminjaman = Peminjaman::latest()->get();
         $akun = User::all();
         return view('peminjaman.riwayat',[
             "title" => "riwayat",
@@ -79,7 +79,7 @@ class PeminjamanController extends Controller
         // $akun = User::all();
 
         $akun = request()->user();
-        $peminjaman = Peminjaman::where('users_id' , $akun->id)->get();
+        $peminjaman = Peminjaman::where('users_id' , $akun->id)->latest()->get();
       
 
         return view('peminjaman.pengajuan',[
@@ -105,7 +105,7 @@ class PeminjamanController extends Controller
         $datasatuan = Satuan::all();
         $inputbarang = Barang::all();
         $akun = User::all();
-        $peminjaman = Peminjaman::all();
+        $peminjaman = Peminjaman::latest()->get();
         return view('peminjaman.peminjaman',[
             "title" => "pengajuan",
             "jenisbarang" => $jenisbarang,
