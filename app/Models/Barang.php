@@ -27,6 +27,7 @@ class Barang extends Model
         'nilai_buku',
         'lokasi',
         'penanggung_jawab',
+        'jumlah_awal',
         'jumlah',
         'kondisi',
         'ket',

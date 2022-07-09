@@ -31,6 +31,7 @@ class CreateBarangsTable extends Migration
             $table->string('nilai_buku')->nullable();
             $table->string('lokasi');
             $table->string('penanggung_jawab');
+             $table->string('jumlah_awal');
             $table->string('jumlah');
             $table->string('kondisi');
             $table->string('ket');
