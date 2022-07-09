@@ -170,8 +170,9 @@
                                                                                     <div
                                                                                         class="col-lg-5 col-md-4 label">
                                                                                         Nilai Perolehan</div>
-                                                                                    <div class="col-lg-7 col-md-8"> Rp.
-                                                                                        {{ $data->nilai_perolehan }}
+                                                                                    <div class="col-lg-7 col-md-8">
+                                                                                        {{ 'Rp ' . number_format($data->nilai_perolehan) }}
+                                                                                        {{-- {{ $data->nilai_perolehan }} --}}
                                                                                     </div>
                                                                                 </div>
 

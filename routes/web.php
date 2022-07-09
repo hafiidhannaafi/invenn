@@ -156,6 +156,8 @@ Route::get('/data-kepala', function () {
 
 Route::get('/redirects',[HomeController::class,"index"]);
 
+// Route::get('/redirects',[HomeController::class,"dashboardadmin"]);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
