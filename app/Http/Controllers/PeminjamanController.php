@@ -121,12 +121,12 @@ class PeminjamanController extends Controller
     
         public function detail_barang($id)
     {
-        $data = DetailPeminjaman::where('kode_peminjaman', $id)->get();
-        //    $peminjaman = Peminjaman::all();
+        $data = DetailPeminjaman::where('kode_peminjaman', $id)->get(); //kode_peminjaman = $id didapatkan
+        $peminjaman = Peminjaman::where('kode_peminjaman', $id)->get();
         return view('peminjaman.data_peminjaman',[
             "title" => "pengajuan",
             "data" => $data,
-            // "peminjaman" => $peminjaman,
+            "peminjaman" => $peminjaman,
         ]);
        
     }
