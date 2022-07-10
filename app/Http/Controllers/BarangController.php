@@ -161,14 +161,14 @@ class BarangController extends Controller
 
      //MENAMPILKAN DATA HASIL INPUT KEPALA UNIT DAN STAFF 
 
-     public function asetbergerak()
+     public function cekdata()
      {
          $dataasalperolehan = DataAsalPerolehan::all();
          $datajenisaset = DataJenisAset::all();
          $jenisbarang = JenisBarang::all();
          $datasatuan = Satuan::all();
          $inputbarang = Barang::all();
-         return view('aset.bergerak',[
+         return view('cekdata',[
              "title" => "peralatan",
              "jenisbarang" => $jenisbarang,
              "jenisaset" => $datajenisaset,

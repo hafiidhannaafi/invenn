@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('content')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script>
         console.log('sdhjfdskfsdfjsdjfksd');
         $("#tgl_pinjam").change(function() {
@@ -33,6 +34,12 @@
             $('#tgl_kembali').on('input', function() {
                 $('#tgl_pinjam').attr('max', this.value);
             });
+        });
+    </script>
+
+    <script>
+        $(function() {
+            $('.selectpicker').selectpicker();
         });
     </script>
 
@@ -92,6 +99,7 @@
                         </div>
                     </div>
 
+
                     <fieldset class="row mb-3">
                         <legend class="col-form-label col-sm-2 pt-0">Jenis Peminjaman</legend>
                         <div class="col-sm-10">
@@ -108,6 +116,13 @@
                             </label>
                         </div>
                     </fieldset>
+
+                    {{-- <select class="selectpicker" data-live-search="true">
+                        <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+                        <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                        <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                    </select> --}}
+
 
                     <div class="row mb-3">
                         <label for="validationTooltip02" class="col-sm-2 col-form-label"> Tujuan Pinjam </label>
@@ -154,7 +169,7 @@
                     </div>
 
                     <div class="row mb-3">
-                        <label for="validationTooltip03" class="col-sm-2 col-form-label">Surat Peminjaman</label>
+                        <label for="validationTooltip03" class="col-sm-2 col-form-label">Surat Pengantar</label>
                         <div class="col-sm-10">
                             <input type="file" id="validationTooltip03" name="surat_pinjam" class="form-control"required>
                             <div class="invalid-feedback">

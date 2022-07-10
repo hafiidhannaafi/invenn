@@ -26,7 +26,7 @@
                 <div class="card">
                     <div class="card-body">
                         <center>
-                            <h5 class="card-title">Riwayat Peminjaman {{ auth()->user()->name }}</h5>
+                            <h5 class="card-title">Proses Peminjaman {{ auth()->user()->name }}</h5>
                             <center>
 
                                 <!-- Table with stripped rows -->
@@ -53,7 +53,7 @@
                                         $nomor = 1;
                                         ?>
                                         @foreach ($peminjaman as $data)
-                                            <tr>
+                                            @if ($data->tgl_kembali >= date('Y-m-d') || $data->status_konfirmasis_id == 1 || $data->status_konfirmasis_id == 2 || $data->status_peminjamans_id == 1 || $data->status_peminjamans_id == 2)
                                                 <th>{{ $nomor++ }}</th>
                                                 <td> {{ $data->kode_peminjaman }}</td>
                                                 <td> {{ $data->nama_peminjam }}</td>
@@ -105,7 +105,8 @@
                                                     @endif
                                                 @endif
 
-                                            </tr>
+                                                </tr>
+                                            @endif
                                         @endforeach
                                     </tbody>
                                 </table>

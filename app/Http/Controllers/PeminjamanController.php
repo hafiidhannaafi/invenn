@@ -67,7 +67,7 @@ class PeminjamanController extends Controller
     }
 
     //MENAMPILKAN DATA MASTER KE FORM
-    public function pengajuan()
+    public function peminjamanstaff()
     {
         $dataasalperolehan = DataAsalPerolehan::all();
         $datajenisaset = DataJenisAset::all();
@@ -82,7 +82,36 @@ class PeminjamanController extends Controller
         $peminjaman = Peminjaman::where('users_id' , $akun->id)->latest()->get();
       
 
-        return view('peminjaman.pengajuan',[
+        return view('staff.peminjaman',[
+            "title" => "pengajuan",
+            "jenisbarang" => $jenisbarang,
+            "jenisaset" => $datajenisaset,
+            "dataasalperolehan" => $dataasalperolehan,
+            "datasatuan" =>$datasatuan,
+            "inputbarang"=> $inputbarang,
+            "peminjaman"=> $peminjaman,
+            "akun"=> $akun,
+            "status" => $status
+        ]);
+       
+    }
+
+    public function riwayatstaff()
+    {
+        $dataasalperolehan = DataAsalPerolehan::all();
+        $datajenisaset = DataJenisAset::all();
+        $jenisbarang = JenisBarang::all();
+        $datasatuan = Satuan::all();
+        $inputbarang = Barang::all();
+        $kode_peminjaman = request()->user();
+         $status = DetailPeminjaman::where('kode_peminjaman' , $kode_peminjaman)->get();
+        // $akun = User::all();
+
+        $akun = request()->user();
+        $peminjaman = Peminjaman::where('users_id' , $akun->id)->latest()->get();
+      
+
+        return view('staff.riwayat',[
             "title" => "pengajuan",
             "jenisbarang" => $jenisbarang,
             "jenisaset" => $datajenisaset,

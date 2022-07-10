@@ -18,34 +18,26 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Data Aset Bergerak</h5>
+                        <h5 class="card-title"> Silakan Cek Data Barang</h5>
+
 
                         {{-- <a href="/data-asetbergerak/form" type="button"  class="btn btn" style="background-color:  #012970; color:#FFFFFF">Tambah</a> --}}
 
                         <!-- Table with stripped rows -->
                         <table class="table datatable">
                             <thead>
-                                {{-- <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Kode</th>
-                    <th scope="col">Nama
-                     Tipe/ Spesifik</th>
-                    <th scope="col">Foto</th>
-                    <th scope="col">Jumlah Satuan</th>
-                    <th scope="col">Kondisi</th>
-                    <th scope="col">Aksi</th>
-                  </tr> --}}
+
                                 <tr>
                                     <th scope="col">No</th>
                                     <th scope="col">
                                         Nama barang
                                     </th>
                                     <th scope="col">Foto</th>
-                                    <th scope="col">Jumlah Satuan</th>
-                                    {{-- <th scope="col">Kondisi</th> --}}
+                                    <th scope="col">Jumlah Awal</th>
+                                    <th scope="col">Sisa barang</th>
                                     <th scope="col">Detail</th>
-                                    <th scope="col">Pinjam</th>
-                                    <th scope="col">status</th>
+
+
                                 </tr>
                             </thead>
 
@@ -54,27 +46,34 @@
                                 $nomor = 1;
                                 ?>
                                 @foreach ($inputbarang as $data)
-                                    @if ($data->jenis_asets_id == 1)
+                                    @if ($data->jenis_asets_id == 1 || $data->jenis_asets_id == 3 || $data->jenis_asets_id == 4)
                                         <tr>
                                             <th> {{ $nomor++ }}</th>
                                             <td> {{ $data->kode }} {{ $data->jenis_barangs->jenis_barang }}
                                                 {{ $data->spesifikasi }} </td>
-                                            {{-- <td> {{ $data->jenis_barangs->jenis_barang}} {{ $data->spesifikasi}}</td> --}}
+
                                             <td>
                                                 <img src="{{ asset('fotobarang/' . $data->foto) }}"
                                                     style="width: 100px;" alt="...">
                                             </td>
-                                            <td> {{ $data->jumlah }} {{ $data->satuans->nama_satuan }}</td>
-                                            {{-- <td> {{ $data->kondisi}}</td> --}}
+                                            <td>{{ $data->jumlah_awal }} {{ $data->satuans->nama_satuan }} </td>
+                                            <td>
+                                                @if ($data->jumlah <= 0)
+                                                    <span class="badge bg-danger">
+                                                        kosong</span>
+                                                @else
+                                                    {{ $data->jumlah }} {{ $data->satuans->nama_satuan }}
+                                                @endif
+
                                             <td>
 
                                                 <!-- Large Modal -->
 
-                                                <button type="button" class="btn btn"
+                                                <button type="button" class="btn btn btn-sm"
                                                     style="background-color:  #012970; color:#FFFFFF"
                                                     data-bs-toggle="modal"
                                                     data-bs-target="#modaldetail{{ $data->id }}">
-                                                    <i class="bi bi-info"></i>
+                                                    <i class="bi bi-eye"></i>
                                                 </button>
 
                                                 <div class="modal fade" id="modaldetail{{ $data->id }}"
@@ -279,13 +278,13 @@
                                                 </div>
                     </div>
                 </div><!-- End Large Modal-->
-                <td>
-                    <a href="/peminjaman/form" type="button" class="btn btn"
-                        style="background-color: #FFA500; color:#FFFFFF"> pinjam</a>
-                </td>
-                <td>
-                    <a href=" " type="button" class="btn btn-danger"> penuh</a>
-                </td>
+
+                {{-- <td>
+                    @if ($data->jumlah <= 0)
+                        <a href=" " type="button" class="btn btn-danger"> stok habis</a>
+                    @else
+                    @endif
+                </td> --}}
                 {{-- <a href="/data-asetbergerak/edit/{{$data->id}}" type="button" class="btn btn" style="background-color: #05b3c3; color:#FFFFFF"><i class="bi bi-pencil"></i></a>
                         <a href="/data-asetbergerak/hapus/{{$data->id}}" onclick="return confirm('Hapus Data?')" type="button" class="btn btn-danger"><i class="bi bi-trash delete"></i></a> --}}
                 </td>

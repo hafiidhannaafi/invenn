@@ -39,7 +39,6 @@
                                     <th scope="col">Nama
                                         Tipe/ Spesifik</th>
                                     <th scope="col">Foto</th>
-                                    <th scope="col">Jumlah awal</th>
                                     <th scope="col">Jumlah Satuan</th>
                                     <th scope="col">Kondisi</th>
                                     <th scope="col">Aksi</th>
@@ -61,7 +60,6 @@
                                                 <img src="{{ asset('fotobarang/' . $data->foto) }}"
                                                     style="width: 100px;" alt="...">
                                             </td>
-                                            <td> {{ $data->jumlah_awal }}</td>
                                             <td> {{ $data->jumlah }} {{ $data->satuans->nama_satuan }}</td>
                                             <td> {{ $data->kondisi }}</td>
                                             <td>
@@ -170,9 +168,8 @@
                                                                                     <div
                                                                                         class="col-lg-5 col-md-4 label">
                                                                                         Nilai Perolehan</div>
-                                                                                    <div class="col-lg-7 col-md-8">
-                                                                                        {{ 'Rp ' . number_format($data->nilai_perolehan) }}
-                                                                                        {{-- {{ $data->nilai_perolehan }} --}}
+                                                                                    <div class="col-lg-7 col-md-8"> Rp.
+                                                                                        {{ $data->nilai_perolehan }}
                                                                                     </div>
                                                                                 </div>
 
@@ -255,6 +252,9 @@
 
                                                                             </div>
                                                                         </div>
+
+
+
                                                                         </p>
 
                                                                     </div>

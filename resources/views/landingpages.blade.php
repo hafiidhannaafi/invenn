@@ -168,13 +168,13 @@
                             <img src="{{ asset('landingpages/assets/img/pricing-free.png') }}" class="img-fluid"
                                 alt="">
                             <ul>
-                                <li>Aset yang</li>
-                                <li>seperti motor, mobil</li>
-                                <li>Nulla at volutpat dola</li>
+
+                                <li>seperti motor, mobil, sepeda</li>
+                                <li>contoh mobil dinas </li>
                                 {{-- <li class="na">Pharetra massa</li>
                 <li class="na">Massa ultricies mi</li> --}}
                             </ul>
-                            <a href="#" class="btn-buy">Read more</a>
+
                         </div>
                     </div>
 
@@ -186,12 +186,12 @@
                             <img src="{{ asset('landingpages/assets/img/pricing-starter.png') }}" class="img-fluid"
                                 alt="">
                             <ul>
-                                <li>Aset yang</li>
+
                                 <li>seperti tanah, gedung, rumah</li>
-                                <li>Nulla at volutpat dola</li>
+                                <li>contoh gedung serba guna, rumah dinas</li>
                                 {{-- <li class="na">Massa ultricies mi</li> --}}
                             </ul>
-                            <a href="#" class="btn-buy">Read more</a>
+
                         </div>
                     </div>
 
@@ -202,11 +202,11 @@
                             <img src="{{ asset('landingpages/assets/img/pricing-business.png') }}"
                                 class="img-fluid" alt="">
                             <ul>
-                                <li>Aset yang</li>
-                                <li>seperti peralatan mesin</li>
-                                <li>Nulla at volutpat dola</li>
+
+                                <li>seperti peralatan mesin, perkantoran</li>
+                                <li>contoh LCD, Printer, Laptop</li>
                             </ul>
-                            <a href="#" class="btn-buy">Read more</a>
+
                         </div>
                     </div>
 
@@ -217,11 +217,11 @@
                             <img src="{{ asset('landingpages/assets/img/pricing-ultimate.png') }}"
                                 class="img-fluid" alt="">
                             <ul>
-                                <li>Aset yang</li>
+
                                 <li>seperti perlengkapan kantor, administrasi</li>
-                                <li>Nulla at volutpat dola</li>
+                                <li>contoh bolpen, buku, pensil </li>
                             </ul>
-                            <a href="#" class="btn-buy">Read more</a>
+
                         </div>
                     </div>
 
@@ -608,7 +608,7 @@
                 </div>
               </div> --}}
 
-                {{-- </div>
+                    {{-- </div>
             </div>
 
             <div class="col-lg-6">
@@ -673,7 +673,7 @@
         </section><!-- End F.A.Q Section -->
 
         <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio">
+        {{-- <section id="portfolio" class="portfolio">
 
             <div class="container" data-aos="fade-up">
 
@@ -862,7 +862,7 @@
 
             </div>
 
-        </section><!-- End Portfolio Section -->
+        </section><!-- End Portfolio Section --> --}}
 
         {{-- <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials">
@@ -1295,7 +1295,7 @@
                         <ul>
                             <li><i class="bi bi-chevron-right"></i> <a href="#">Beranda</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="#">Tentang</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">FAQ</a></li>
+
                             <li><i class="bi bi-chevron-right"></i> <a href="#">Tata Cara</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="#">Kontak kami</a></li>
                         </ul>
@@ -1305,10 +1305,12 @@
                         <h4>Pelayanan LPTP</h4>
                         <ul>
                             <li><i class="bi bi-chevron-right"></i> <a href="#">Training</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Magang</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Kelas Pertanian</a></li>
+
+
                         </ul>
                     </div>
 
@@ -1323,8 +1325,10 @@
                             Kabupaten Karanganyar <br>
                             Jawa Tengah 57731
                             Indonesia<br><br>
+                            <strong>Jam Buka:<br></strong> Senin - Jumat 08.00-16.00 WIB<br>
+                            Sabtu-Minggu Tutup<br>
                             <strong>Phone:</strong> (0271) 826620<br>
-                            <strong>Email:</strong> info@example.com<br>
+
                         </p>
 
                     </div>

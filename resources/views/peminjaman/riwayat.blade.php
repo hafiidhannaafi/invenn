@@ -32,14 +32,16 @@
                             <thead>
                                 <tr>
                                     <th scope="col">No</th>
-                                    <th scope="col">Kode </th>
+                                    {{-- <th scope="col">Nama </th> --}}
                                     <th scope="col">Nama </th>
                                     <th scope="col">Jenis Peminjaman</th>
+                                    {{-- <th scope="col">Barang</th> --}}
                                     <th scope="col">Kegunaan</th>
+                                    {{-- <th scope="col">Jumlah</th> --}}
                                     <th scope="col">Tgl Pengajuan</th>
                                     <th scope="col">Tgl Peminjaman</th>
                                     <th scope="col">Tgl Pengembalian</th>
-                                    <th scope="col">Surat</th>
+                                    {{-- <th scope="col">Surat</th> --}}
                                     <th scope="col">Detail</th>
                                     <th scope="col">Status Konfirmasi</th>
                                     <th scope="col">verifikasi</th>
@@ -53,19 +55,24 @@
                                 @foreach ($peminjaman as $data)
                                     <tr>
                                         <th>{{ $nomor++ }}</th>
-                                        <td> {{ $data->kode_peminjaman }}</td>
+                                        {{-- <td> {{ $data->users->name}}</td> --}}
                                         <td> {{ $data->nama_peminjam }}</td>
                                         <td> {{ $data->jenis_peminjaman }}</td>
+                                        {{-- <td> {{ $data->barangs->kode}} - {{ $data->barangs->jenis_barangs->jenis_barang}}  {{ $data->barangs->spesifikasi}} </td> --}}
                                         <td>{{ $data->tujuan }}</td>
-                                        <td> <?php echo date('d F Y', strtotime($data->tgl_pengajuan)); ?> </td>
-                                        <td> <?php echo date('d F Y', strtotime($data->tgl_pinjam)); ?> </td>
-                                        <td> <?php echo date('d F Y', strtotime($data->tgl_kembali)); ?></td>
-                                        <td>{{ $data->surat_pinjam }}</td>
+                                        {{-- <td>{{ $data->jumlah_pinjam}}</td> --}}
+                                        <td>{{ $data->tgl_pengajuan }}</td>
+                                        <td>{{ $data->tgl_pinjam }}</td>
+                                        <td>{{ $data->tgl_kembali }}</td>
+                                        {{-- <td>{{ $data->surat_pinjam}}</td> --}}
+
                                         <td>
+                                            {{-- <button style =" float :right; background-color:   #012970; color:#FFFFFF" type="submit" class="btn btn" >Submit</button> --}}
                                             <a href="/detailbarang/{{ $data->kode_peminjaman }}"
                                                 style=" float :right; background-color:   #012970; color:#FFFFFF" button
                                                 type="button" class="btn btn-sm">Detail</a>
                                         </td>
+
                                         @php
                                             $status = App\Models\DetailPeminjaman::where('kode_peminjaman', $data->kode_peminjaman)->first();
                                         @endphp
@@ -81,14 +88,18 @@
                                             </td>
                                         @endif
                                         <td>
-                                            <!--STATUS KONFIRMASI DI SETUJUI -->
+
+                                            <!--STATUS DI SETUJUI -->
                                             <a href="/status_setuju/{{ $data->kode_peminjaman }}" type="button"
                                                 class="btn btn-success"><i class="bi bi-check-lg"></i></a></br>
                                             <!--STATUS DI TOLAK-->
                                             <a href="/status_ditolak/{{ $data->kode_peminjaman }}" type="button"
                                                 class="btn btn-danger"><i class="bi bi-x"></i></a>
-                                        </td>
 
+
+
+                                        </td>
+                                        </td>
 
                                     </tr>
                                 @endforeach

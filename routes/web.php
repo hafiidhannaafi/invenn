@@ -275,7 +275,8 @@ Route::get('/status_barangdiambil/{kode_peminjaman}', 'App\Http\Controllers\Pemi
 Route::get('/status_kembali/{kode_peminjaman}', 'App\Http\Controllers\PeminjamanController@status_kembali');
  
 //RIWAYAT PEMINJAM staff
-Route::get('/peminjaman/pengajuan', [PeminjamanController::class, 'pengajuan']); 
+Route::get('/staff/peminjaman', [PeminjamanController::class, 'peminjamanstaff']); 
+Route::get('/staff/riwayat', [PeminjamanController::class, 'riwayatstaff']); 
 Route::get('/download/{surat_pinjam}', [PeminjamanController::class, 'download']); 
 Route::get('/detailbarang/{id}', [PeminjamanController::class, 'detail_barang']); 
 
@@ -290,7 +291,7 @@ Route::get('/pencatatan/barangkeluar', [BarangKeluarController::class, 'databara
 Route::get('/pencatatan/barangmasuk', [BarangMasukController::class, 'databarangmasuk']); 
 
 //DATA ASET kepala unit dan staff
-Route::get('/aset/bergerak', [BarangController::class, 'asetbergerak']); 
+Route::get('/cekdata', [BarangController::class, 'cekdata']); 
 Route::get('/aset/tidakbergerak', [BarangController::class, 'asettidakbergerak']); 
 Route::get('/aset/peralatan', [BarangController::class, 'asetperalatan']); 
 Route::get('/aset/perlengkapan', [BarangController::class, 'asetperlengkapan']); 

@@ -40,7 +40,7 @@
                                     <th scope="col">Jumlah Satuan</th>
                                     {{-- <th scope="col">Kondisi</th> --}}
                                     <th scope="col">Detail</th>
-                                    <th scope="col">Pinjam</th>
+                                    <th scope="col">sisa barang</th>
                                     <th scope="col">status</th>
                                 </tr>
                             </thead>
@@ -275,10 +275,7 @@
                                                 </div>
                     </div>
                 </div><!-- End Large Modal-->
-                <td>
-                    <a href="/peminjaman/form" type="button" class="btn btn"
-                        style="background-color: #FFA500; color:#FFFFFF"> pinjam</a>
-                </td>
+
                 <td>
                     @if ($data->jumlah <= 0)
                         <a href=" " type="button" class="btn btn-danger"> Penuh</a>

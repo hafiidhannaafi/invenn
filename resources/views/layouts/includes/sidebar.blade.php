@@ -468,41 +468,18 @@
              {{-- </ul>
       </li><!-- End Forms Nav --> --}}
 
-             <li class="nav-item">
-                 <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-                     <i class="bi bi-journal-text"></i><span>Data Aset</span><i
-                         class="bi bi-chevron-down ms-auto"></i>
+
+
+
+             <!-- End Forms Nav -->
+
+             <li class="nav-item ">
+                 <a class="nav-link collapsed" href="{{ url('/cekdata') }}">
+                     <i class="bi bi-journal-text"></i>
+                     <span>Cek Data Barang</span>
                  </a>
-                 <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                     {{-- <li>
-            <a class="active" href="/asetbergerak">
-              <i class="bi bi-circle"></i><span>Data Aset</span>
-            </a>
-          </li> --}}
+             </li>
 
-                     <li>
-                         <a href="/aset/bergerak">
-                             <i class="bi bi-circle"></i><span>Data Aset Bergerak</span>
-                         </a>
-                     </li>
-                     {{-- <li>
-            <a  href="/aset/tidakbergerak">
-              <i class="bi bi-circle"></i><span>Data Aset Tidak Bergerak</span>
-            </a>
-          </li> --}}
-
-                     <li>
-                         <a href="/aset/peralatan">
-                             <i class="bi bi-circle"></i><span>Data Peralatan</span>
-                         </a>
-                     </li>
-                     <li>
-                         <a href="/aset/perlengkapan">
-                             <i class="bi bi-circle"></i><span>Data Perlengkapan</span>
-                         </a>
-                     </li>
-                 </ul>
-             </li><!-- End Forms Nav -->
 
              <li class="nav-item ">
                  <a class="nav-link collapsed" href="{{ url('/peminjaman/form') }}">
@@ -512,42 +489,20 @@
              </li>
 
              <li class="nav-item ">
-                 <a class="nav-link collapsed" href="{{ url('/peminjaman/pengajuan') }}">
+                 <a class="nav-link collapsed" href="{{ url('/staff/peminjaman') }}">
                      <i class="bi bi-cart"></i>
                      <span>Proses Peminjaman</span>
                  </a>
              </li>
 
              <li class="nav-item ">
-                 <a class="nav-link collapsed" href=" ">
+                 <a class="nav-link collapsed" href="{{ url('/staff/riwayat') }} ">
                      <i class="bi bi-cart-check-fill"></i>
                      <span>Riwayat Peminjaman</span>
                  </a>
              </li>
 
 
-             {{-- <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-cart"></i><span>Riwayat Peminjaman</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a class="active" href="icons-bootstrap.html">
-              <i class="bi bi-circle"></i><span>Data Peminjaman</span>
-            </a>
-          </li>
-          <li>
-            <a class="active" href="icons-remix.html">
-              <i class="bi bi-circle"></i><span>Data Pengembalian</span>
-            </a>
-          </li>
-          <li>
-            <a class="active" href="icons-boxicons.html">
-              <i class="bi bi-circle"></i><span>Data Perpanjangan</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Icons Nav --> --}}
 
 
 
